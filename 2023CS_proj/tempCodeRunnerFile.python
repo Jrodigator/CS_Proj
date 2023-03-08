@@ -1,0 +1,76 @@
+### PRIME GENERATOR
+import numpy
+import numpy as np 
+import time
+# attempt 1 (Sieve of Eratosthenes) -> too slow 
+
+# def count_primes_less_than(n:int) -> int:
+#     n = [i for i in range(n)][2:]
+#     x = 0
+#     while x < len(n) - 1:
+#         n = n[:x+1] + [i for i in n[x+1:] if i % n[x] != 0]
+#         x += 1
+#     return len(n)
+
+# attempt 2 (Sieve of Eratosthenes with steps = square of last prime) -> 
+
+def count_primes_less_than(n:int) -> int:
+    primes = np.array([1 for i in range(n)])         # array of all true
+    i = 2                                   # set first prime
+    while i < n**0.5:                       # loop starting at first prime 2 
+        if primes[i]:                       # get last prime
+            j = i*i                         # start at sqaure of last found prime 
+            while j < n:                    # loop through multiples of last prime
+                primes[j] = 0               # set index mutiples of last prime to false
+                j += i                      # inc j by i (cycle through multiples)
+        i += 1                              # inc i 
+    return np.count_nonzero(primes[2:] == 1)             # return count of primes (from 2)
+
+
+# wilsons theorem : a positive integer n > 1 is a prime if and only if (n - 1)! ≡ -1(mod n)"
+def primes2n(n): 
+    f = 1                                   # factorial (1!, 2!, 3!)
+    c = 0                                   # counter
+    for i in range(2, n):                   # range to n
+        f *= i - 1                          # (i - 2)! * (i - 1) = (i - 1)! 
+        c += ( ( (f + 1) % i ) == 0 )       # +1 if (f + 1) % i == 0
+    return c
+
+
+def primes2n(n): 
+    f = 1                                                             
+    p = np.array([0]*n)
+    for i in range(2, n):                
+        f *= i - 1                     
+        p[i] = 0 if not (((f + 1) % i) == 0) else 1     
+    return np.count_nonzero(p[1:] == 1)
+
+def primes2n(n): 
+    start = time.time()
+    f = 1
+    c = 1
+    for i in range(3, n, 2):
+        f *= i - 1
+        c += (f + 1) % i == 0
+
+    end = time.time()
+    print("Time taken: ", end - start)
+    print(c)
+    return c
+
+def primesfrom3to(n):
+    """ Returns a array of primes, 3 <= p < n """
+    sieve = numpy.ones(n//2, dtype=bool)
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i//2]:
+            sieve[i*i//2::i] = False
+    return len(2*numpy.nonzero(sieve)[0][1::]+1)
+
+primes2n(100000)
+
+# Driver code
+n = 15
+print(primesfrom3to(100000))
+
+   
+    
