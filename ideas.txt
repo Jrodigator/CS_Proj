@@ -1,3 +1,8 @@
 - Power ups
 - Bee aiming
 - Main menu and exit
+
+TO-Do 
+Jared -> fix bee aiming 
+Ross -> starting with menu 
+Tiaan -> power up system
