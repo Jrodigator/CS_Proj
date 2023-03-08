@@ -1,1 +1,3 @@
-Test
+- Power ups
+- Bee aiming
+- Main menu and exit
