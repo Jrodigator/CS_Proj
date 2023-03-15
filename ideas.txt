@@ -1,5 +1,5 @@
 TO-Do 
-Jared -> fix bee aiming -> integrate different systems -> remove sounds -> enemy movement
+Jared -> integrate different systems -> update sounds
 Ross -> starting with menu -> download DOOM soundtrack
 Tiaan -> power up system
 
