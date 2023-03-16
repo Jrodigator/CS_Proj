@@ -1,0 +1,4 @@
+TO-Do 
+Jared -> fix bee aiming 
+Ross -> starting with menu 
+Tiaan -> power up system
