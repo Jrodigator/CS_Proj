@@ -9,6 +9,20 @@ Jared's Sources
 Custom Sprites (Bee, Stinger, Ant, Bird, Bear and Lives) made by me. ( Made With https://www.piskelapp.com)
 Background Image made as a shader with c++ and OpenGL -> inspiration from ShaderToy.com
 
+Tiaan's Sources
+
+Sprites for the jellies and the blue bullet are free assets downloadable from www.gameart2d.com and opengameart.org, respectively under the Creative Commons license
+Jellies:
+- Title: "JELLY SQUASH FREE SPRITES"
+- Author:  "Zuhria Alfitra (a.k.a pzUH)", owner of 'Game Art 2D - Royalty Free 2D Game Assets'
+- Source: "https://www.gameart2d.com/jelly-squash-free-sprites.html" (Accessed: March 23, 2023)
+- License: "CC0" - https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
+Blue bullet/laser
+- Title: "11.png" from "Assets Free Laser Bullets Pack 2020"
+- Author: "Wenrexa"
+- Source: "https://opengameart.org/content/assets-free-laser-bullets-pack-2020" (Accessed: March 23, 2023) 
+- License: "CC0" - https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
+
 
 Additional Features list:
 
